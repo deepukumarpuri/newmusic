@@ -8,6 +8,8 @@ from config import (
     BOT_NAME,
     BOT_USERNAME,
     GROUP_SUPPORT,
+    NETWORK,
+    VIDEO_URL,
     OWNER_NAME,
     UPDATES_CHANNEL,
 )
@@ -81,7 +83,7 @@ async def start_private(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/VeezMusic"
+                        "🌐 Network Channel", url="https://t.me/{NETWORK}"
                     )
                 ],
             ]
@@ -109,7 +111,7 @@ async def start_group(client: Client, message: Message):
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is working normally\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 Uptime Status: `{uptime}`\n\n**Thanks for Adding me here, for playing music on your Group voice chat** ❤"
+    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is Working Normally\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 Uptime Status: `{uptime}`\n\n**Thanks For Adding Me Here, For Playing Music On Your Group Voice Chat** ❤\n **For Music Playing in Your Group Watch This Video** :- {VIDEO_URL}"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
@@ -125,9 +127,11 @@ async def help(client: Client, message: Message):
     await message.reply_text(
         f"""✨ **Hello** {message.from_user.mention()} !
 
-» **press the button below to read the explanation and see the list of available commands !**
+\n **For Music Playing in Your Group Watch This Video** :- {VIDEO_URL}
 
-⚡ __Powered by {BOT_NAME} A.I__""",
+» **Press The Button Below To Read The Explanation And See The List Of Available Commands !**
+
+⚡ __Powered by {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="❓ Basic Guide", callback_data="cbguide")]]
         ),
@@ -149,7 +153,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 bot status:\n"
-        f"• **uptime:** `{uptime}`\n"
-        f"• **start time:** `{START_TIME_ISO}`"
+        "🤖 Bot Status:\n"
+        f"• **Uptime:** `{uptime}`\n"
+        f"• **Start Time:** `{START_TIME_ISO}`"
     )
