@@ -22,9 +22,9 @@ async def clear_downloads(_, message: Message):
     if ls_dir:
         for file in os.listdir(downloads):
             os.remove(os.path.join(downloads, file))
-        await message.reply_text("✅ **removed all downloaded files**")
+        await message.reply_text("✅ **Removed All Downloaded Files**")
     else:
-        await message.reply_text("❌ **no files is downloaded**")
+        await message.reply_text("❌ **No Files is Downloaded**")
 
 
 @Client.on_message(command(["clear", f"clear@{BOT_USERNAME}"]) & ~filters.edited)
@@ -36,6 +36,6 @@ async def clear_jpg_image(_, message: Message):
     if ls_dir:
         for dta in os.listdir(pth):
             os.system("rm -rf *.jpg")
-        await message.reply_text("✅ **succesfully cleared**")
+        await message.reply_text("✅ **Succesfully Cleared**")
     else:
-        await message.reply_text("✅ **already cleared**")
+        await message.reply_text("✅ **Already Cleared**")
