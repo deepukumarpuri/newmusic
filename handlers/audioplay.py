@@ -43,7 +43,7 @@ async def stream(_, message: Message):
         return await lel.edit("💭 **please reply to a telegram audio file**")
     if round(audio.duration / 60) > DURATION_LIMIT:
         return await lel.edit(
-            f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
+            f"❌ **Music With Duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
         )
 
     title = audio.title
