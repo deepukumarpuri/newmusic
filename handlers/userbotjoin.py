@@ -49,11 +49,11 @@ async def join_group(client, message):
 @authorized_users_only
 async def leave_group(client, message):
     try:
-        await USER.send_message(message.chat.id, "✅ userbot successfully left chat")
+        await USER.send_message(message.chat.id, "✅ Userbot Successfully Left Cqqhat")
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text(
-            "❌ **userbot couldn't leave your group, may be floodwaits.**\n\n**» or manually kick userbot from your group**"
+            "❌ **Userbot Couldn't Leave Your Group, May Be Floodwaits.**\n\n**» Or Manually Kick Userbot From Your Group**"
         )
 
         return
@@ -73,7 +73,7 @@ async def leave_all(client, message):
             await USER.leave_chat(dialog.chat.id)
             left += 1
             await lol.edit(
-                f"Userbot leaving all group...\n\nLeft: {left} chats.\nFailed: {failed} chats."
+                f"Userbot Leaving All Group...\n\nLeft: {left} chats.\nFailed: {failed} Chats."
             )
         except:
             failed += 1
