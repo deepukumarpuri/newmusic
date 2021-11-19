@@ -19,6 +19,8 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 BOT_USERNAME = getenv("BOT_USERNAME", "veezmusicbot")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "veezassistant1")
+VIDEO_URL = getenv("VIDEO_URL", "veezmusicbot")
+NETWORK = getenv("ASSISTANT_NAME", "veezassistant1")
 GROUP_SUPPORT = getenv("GROUP_SUPPORT", "VeezSupportGroup")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "levinachannel")
 # isi dengan username kamu tanpa simbol @
