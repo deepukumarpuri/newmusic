@@ -18,7 +18,7 @@ async def join_group(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "• **i'm not have permission:**\n\n» ❌ __Add Users__",
+            "• **I Have Not Permission:**\n\n» ❌ __Add Users__",
         )
         return
 
@@ -34,12 +34,12 @@ async def join_group(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"🛑 Flood Wait Error 🛑 \n\n**userbot couldn't join your group due to heavy join requests for userbot**"
-            "\n\n**or add assistant manually to your Group and try again**",
+            f"🛑 Flood Wait Error 🛑 \n\n**Userbot Couldn't Join Your Group Due To Heavy Join Requests For Userbot**"
+            "\n\n**or Add Assistant Manually To Your Group And Try Again**\n Contact To For New Bot :- @DKBOTZHELP",
         )
         return
     await message.reply_text(
-        f"✅ **userbot succesfully entered chat**",
+        f"✅ **Userbot Succesfully Entered Chat**",
     )
 
 
@@ -49,7 +49,7 @@ async def join_group(client, message):
 @authorized_users_only
 async def leave_group(client, message):
     try:
-        await USER.send_message(message.chat.id, "✅ Userbot Successfully Left Cqqhat")
+        await USER.send_message(message.chat.id, "✅ Userbot Successfully Left Chat")
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text(
@@ -67,7 +67,7 @@ async def leave_all(client, message):
 
     left = 0
     failed = 0
-    lol = await message.reply("🔄 **userbot** leaving all chats !")
+    lol = await message.reply("🔄 **Userbot** Leaving All Chats !")
     async for dialog in USER.iter_dialogs():
         try:
             await USER.leave_chat(dialog.chat.id)
