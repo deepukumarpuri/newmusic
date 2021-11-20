@@ -36,17 +36,17 @@
         "LOG_CHANNEL": {
             "description": "create a private channel and get the channel id (give the channel username/link to bot @username_to_id_bot and get the channel id), add your bot as admin to the channel too",
             "required": true,
-            "value": ""
+            "value": "-100"
         },
         "BOT_USERNAME": {
             "description": "fill with your bot username without @",
             "required": true,
-            "value": "veezmusicbot"
+            "value": "Jdjdjdhdhbaoyagabot"
         },
         "ASSISTANT_NAME": {
             "description": "fill with the assistant username without @",
             "required": true,
-            "value": "veezasisstant"
+            "value": "VC_RADIO_BOT_HELPER"
         },
         "BG_IMAGE": {
             "description": "fill with your costum background image link",
@@ -56,12 +56,12 @@
         "OWNER_NAME": {
             "description": "fill with your telegram username without @",
             "required": false,
-            "value": "dlwrml"
+            "value": "DKBOTZHELP"
         },
         "ALIVE_NAME": {
             "description": "fill with the nickname of your telegram account",
             "required": false,
-            "value": "Levina"
+            "value": "DKBOTZ"
         },
         "API_ID": {
             "description": "your Api ID from my.telegram.org/apps",
@@ -83,12 +83,12 @@
         "UPDATES_CHANNEL": {
             "description": "if you have channel, fill the channel username here without @",
             "required": false,
-            "value": "levinachannel"
+            "value": "DKBOTZ"
         },
         "GROUP_SUPPORT": {
             "description": "if you have group, fill the group username here without @",
             "required": false,
-            "value": "VeezSupportGroup"
+            "value": "DK_BOTZ"
         }
     },
     "addons": [],
